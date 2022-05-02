@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Button,
   Container,
@@ -14,7 +15,7 @@ const Header = () => {
     <div>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#">NS Perfume</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">NS Perfume</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -22,9 +23,9 @@ const Header = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link to="/home">Home</Nav.Link>
-              <Nav.Link to="/perfumes">Perfumes</Nav.Link>
-              <Nav.Link to="blogs">Blogs</Nav.Link>
+              <Nav.Link as={Link} to="/home">Home</Nav.Link>
+              <Nav.Link as={Link} to="/perfumes">Perfumes</Nav.Link>
+              <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
               <NavDropdown title="Link" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
@@ -35,8 +36,8 @@ const Header = () => {
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#" disabled>
-                Link
+              <Nav.Link as={Link} to="/about" >
+                About
               </Nav.Link>
             </Nav>
             <Form className="d-flex">
