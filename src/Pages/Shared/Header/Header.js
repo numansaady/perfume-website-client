@@ -25,30 +25,19 @@ const Header = () => {
             >
               <Nav.Link as={Link} to="/home">Home</Nav.Link>
               <Nav.Link as={Link} to="/perfumes">Perfumes</Nav.Link>
-              <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link as={Link} to="/add">Add Perfume</Nav.Link>
+              <Nav.Link as={Link} to="manage">Manage </Nav.Link>
+              <Nav.Link as={Link} to="myItem">My Items</Nav.Link>
+              <Nav.Link as={Link} to="/login">Login</Nav.Link>
+              <Nav.Link as={Link} to="/signOut">Sign Out</Nav.Link>
+              <Nav.Link as={Link} to="/signUp">Sign Up</Nav.Link>
+              <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
+              
               <Nav.Link as={Link} to="/about" >
                 About
               </Nav.Link>
             </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
+            
           </Navbar.Collapse>
         </Container>
       </Navbar>
