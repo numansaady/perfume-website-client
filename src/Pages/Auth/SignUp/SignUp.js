@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './SignUp.css';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const SignUp = () => {
     const [agree, setAgree] = useState(false);
@@ -27,7 +29,7 @@ const SignUp = () => {
     }
 
     if(loading){
-        // return <Loading></Loading>
+        return <Loading></Loading>
     }
 
     if (user) {
@@ -77,7 +79,7 @@ const SignUp = () => {
                     value="Sign Up" />
             </form>
             <p>Have an account? <br /> <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Go to Login</Link> </p>
-            {/* <SocialLogin></SocialLogin> */}
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
