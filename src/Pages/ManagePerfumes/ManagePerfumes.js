@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import usePerfumes from "../../hooks/usePerfumes";
 import Perfume from "../Perfume/Perfume";
-import "./Perfumes.css";
 
-const Perfumes = () => {
+const ManagePerfumes = () => {
   const [perfumes, setPerfumes] = usePerfumes();
-
   return (
     <div id="perfumes" className="container">
       <div className="row">
@@ -17,11 +15,8 @@ const Perfumes = () => {
           ))}
         </div>
       </div>
-      <div>
-          <Link className="btn btn-primary my-4" to="/manage">Manage Inventories</Link>
-      </div>
     </div>
   );
 };
 
-export default Perfumes;
+export default ManagePerfumes;

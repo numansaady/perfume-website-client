@@ -16,6 +16,7 @@ const AddPerfume = () => {
         })
         .then(res=> res.json())
         .then(data =>{
+            console.log(data);
             toast('Perfume added successfully!')
             reset();
         } )
@@ -30,6 +31,7 @@ const AddPerfume = () => {
                 <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
                 <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
                 <input className='mb-2' placeholder='Supplier' type="text" {...register("supplier")} />
+                {/* <input className='mb-2' placeholder='email' type="email" {...register("email")}  /> */}
                 <input type="submit" value="Add Perfume" />
             </form>
         </div>
