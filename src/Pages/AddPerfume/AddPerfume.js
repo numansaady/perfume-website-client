@@ -9,7 +9,7 @@ const AddPerfume = () => {
     const [user] = useAuthState(auth);
     
     const onSubmit = newPerfume => {
-        const url = `http://localhost:5000/perfume`;
+        const url = `https://blooming-lowlands-86443.herokuapp.com/perfume`;
         fetch(url, {
             method: 'POST',
             headers: {

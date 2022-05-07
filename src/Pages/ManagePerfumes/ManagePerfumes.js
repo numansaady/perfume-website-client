@@ -13,13 +13,12 @@ const ManagePerfumes = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm('Are you sure?');
         if(proceed){
-            const url = `http://localhost:5000/perfume/${id}`;
+            const url = `https://blooming-lowlands-86443.herokuapp.com/perfume/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 const remaining = perfumes.filter(perfume => perfume._id !== id);
                 setPerfumes(remaining);
             })
