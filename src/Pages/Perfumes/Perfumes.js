@@ -10,7 +10,7 @@ const Perfumes = () => {
   return (
     <div id="perfumes" className="container">
       <div className="row">
-        <h1 className="text-primary text-center mt-5"> Our All Perfumes</h1>
+        <h1 className="text-primary text-center my-5"> Our All Perfumes</h1>
         <div className="perfumes-container">
           {perfumes.map((perfume) => (
             <Perfume key={perfume._id} perfume={perfume}></Perfume>

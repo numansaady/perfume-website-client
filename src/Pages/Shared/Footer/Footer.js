@@ -4,7 +4,7 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <div>
+        <div className='py-3 bg-secondary'>
             <p>&copy; {year} NS Perfumes. All Right Reserved</p>
         </div>
     );

@@ -1,14 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
-import { useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import {
+  useSignInWithGithub,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 
 const SocialLogin = () => {
-    const navigate = useNavigate();
-    const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
 
@@ -16,13 +20,19 @@ const SocialLogin = () => {
   if (error || error1) {
     errorMsg = (
       <div>
-        <p>Error: {error?.message} {error1?.message}</p>
+        <p>
+          Error: {error?.message} {error1?.message}
+        </p>
       </div>
     );
   }
+  
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
-  if(user || user1){
-    navigate(from, {replace: true});
+  if (user || user1) {
+    navigate(from, { replace: true });
   }
 
   return (
@@ -40,8 +50,10 @@ const SocialLogin = () => {
         >
           <FontAwesomeIcon icon={faGoogle} /> Google Sign In
         </button>
-        <button  onClick={()=> signInWithGithub()}
-        className="btn btn-primary d-block mx-auto mb-3 w-50">
+        <button
+          onClick={() => signInWithGithub()}
+          className="btn btn-primary d-block mx-auto mb-3 w-50"
+        >
           <FontAwesomeIcon icon={faGithub} /> Github Sign In
         </button>
       </div>

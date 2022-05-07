@@ -1,6 +1,33 @@
-# Getting Started with Create React App
+## Getting Started with NS Perfume Center
+## Short Description: 
+As a Junior Front-End Web Developer I tried to create an app on a warehouse management (inventory management) website. I tried to build a full-stack website using `React`, `firebase`, `react-firebase-hook`, `react router`, `node`, `express`, `mongodb` etc. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **`NS Perfume Center`**
+
+Client Side link: [NS Perfume Center](https://ns-perfume-center.web.app/).
+
+Server Side link: [NS Perfume Center](https://blooming-lowlands-86443.herokuapp.com/).
+
+## Included Features in this project
+
+- **`Added A Slider about Perfume Center`**
+- **`Added only 6 Perfumes on Homepage, more than 6 on manage inventories page `**
+- **`Added Private route`**
+- **`Added Inventory management system`**
+- **`Added Environment Variable to secure secret Data`**
+- **`Added Validation form for user`**
+- **`Added some JWT token to secure api`**
+- **`Some Briefing about firebase, authentication and authorization`**
+
+## Included Technology in this project
+
+- **[React](https://reactjs.org/)**
+- **[React Router](https://reactrouter.com/)**
+- **[React firebase Hooks](https://github.com/CSFrequency/react-firebase-hooks)**
+- **[React Toatify](https://toastify.org/en-US/)**
+- **[React-Bootstrap](https://react-bootstrap.github.io/)**
+
+
 
 ## Available Scripts
 
