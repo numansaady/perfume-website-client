@@ -15,6 +15,8 @@ import NotFound from "./Pages/NotFound/NotFound";
 import AddPerfume from "./Pages/AddPerfume/AddPerfume";
 import RequireAuth from "./Pages/Auth/RequireAuth/RequireAuth";
 import UpdateStock from "./Pages/UpdateStock/UpdateStock";
+import MyItems from "./Pages/MyItems/MyItems";
+import ManagePerfumes from "./Pages/ManagePerfumes/ManagePerfumes";
 
 function App() {
   return (
@@ -38,7 +40,12 @@ function App() {
         }></Route>
         <Route path="/manage" element={
           <RequireAuth>
-            <Perfumes/>
+            <ManagePerfumes/>
+          </RequireAuth>
+        }></Route>
+        <Route path="/myItem" element={
+          <RequireAuth>
+            <MyItems/>
           </RequireAuth>
         }></Route>
         <Route path="/login" element={<Login />}></Route>

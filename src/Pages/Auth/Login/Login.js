@@ -77,7 +77,7 @@ const Login = () => {
                 </Button>
             </Form>
             {errorElement}
-            <p>First time at NS Perfume Center? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Sign Up</Link> </p>
+            <p>First time at NS Perfume Center? <Link to="/signup" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Sign Up</Link> </p>
             <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             <SocialLogin></SocialLogin>
             

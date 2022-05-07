@@ -7,7 +7,6 @@ import {
   FormControl,
   Nav,
   Navbar,
-  NavDropdown,
 } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
@@ -18,6 +17,7 @@ const Header = () => {
 
   const handleSignOut = () => {
     signOut(auth);
+
   };
   return (
     <div>
@@ -59,7 +59,7 @@ const Header = () => {
                 </>
               )}
               {user ? (
-                <Nav.Link as={Link} to="/signOut" className="btn btn-warning" onClick={handleSignOut}>
+                <Nav.Link as={Link} to="/home" className="btn btn-warning" onClick={handleSignOut}>
                   Sign Out
                 </Nav.Link>
               ) : (

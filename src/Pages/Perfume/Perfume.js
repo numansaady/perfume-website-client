@@ -17,7 +17,7 @@ const Perfume = ({perfume}) => {
             <p>Price: {price}</p>
             <p>Quantity: {quantity}</p>
             <p>Supplier: {supplier}</p>
-            <button onClick={() => updateStock(_id)} className='btn btn-primary'>Update Stock: {name}</button>
+            <button onClick={() => updateStock(_id)} className='btn btn-primary'>Update Stock</button>
         </div>
     );
 };

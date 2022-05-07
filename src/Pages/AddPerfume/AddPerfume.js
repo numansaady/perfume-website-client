@@ -1,9 +1,12 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
 
 const AddPerfume = () => {
     const { register, handleSubmit, reset } = useForm();
+    const [user] = useAuthState(auth);
     
     const onSubmit = newPerfume => {
         const url = `http://localhost:5000/perfume`;
@@ -31,7 +34,7 @@ const AddPerfume = () => {
                 <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
                 <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
                 <input className='mb-2' placeholder='Supplier' type="text" {...register("supplier")} />
-                {/* <input className='mb-2' placeholder='email' type="email" {...register("email")}  /> */}
+                <input className='mb-2' value={user?.email} type="email" {...register("email")}  />
                 <input type="submit" value="Add Perfume" />
             </form>
         </div>
