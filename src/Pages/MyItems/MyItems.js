@@ -48,14 +48,13 @@ const MyItems = () => {
         <div id="perfumes" className="container">
         <PageTitle title="My Items"></PageTitle>
         <div className="row">
-          <h1 className="text-primary text-center mt-5">{myPerfume.length} Items of : {user.displayName}</h1>
+          <h1 className="text-primary text-center mt-5">{myPerfume.length} Items of : {user?.displayName || user?.email}</h1>
           <div className="">
           <table className="table table-success table-striped table-hover">
                 <thead>
                   <th>Perfume Name</th>
                   <th>Description</th>
                   <th>Price</th>
-                  <th>Add Item</th>
                   <th>Action</th>
                 </thead>
             {myPerfume.map((perfume) => (            
