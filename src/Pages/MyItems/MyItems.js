@@ -11,11 +11,10 @@ const MyItems = () => {
 
     useEffect( () =>{
         const email = user?.email;
-        fetch(`http://localhost:5000/myItem?email=${email}`, {
+        fetch(`https://blooming-lowlands-86443.herokuapp.com/myItem?email=${email}`, {
             method: 'GET', 
             headers:{
-                "content-type":"application/json",
-                "authorization": `Bearer ${localStorage.getItem('accessToken')}`
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
         .then(res => {
