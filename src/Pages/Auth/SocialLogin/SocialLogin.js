@@ -13,8 +13,8 @@ const SocialLogin = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
+  const [signInWithGoogle, user, googleLoading, error] = useSignInWithGoogle(auth);
+  const [signInWithGithub, user1, githubLoading, error1] = useSignInWithGithub(auth);
 
   let errorMsg;
   if (error || error1) {
@@ -27,7 +27,7 @@ const SocialLogin = () => {
     );
   }
   
-  if (loading) {
+  if (googleLoading || githubLoading) {
     return <Loading></Loading>;
   }
 

@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
-import About from "./Pages/About/About";
 import AddPerfume from "./Pages/AddPerfume/AddPerfume";
 import Login from "./Pages/Auth/Login/Login";
 import RequireAuth from "./Pages/Auth/RequireAuth/RequireAuth";
@@ -26,7 +25,6 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/perfumes" element={<Perfumes />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
-        <Route path="/about" element={<About />}></Route>
         <Route path="/add" element={
           <RequireAuth>
             <AddPerfume/>
