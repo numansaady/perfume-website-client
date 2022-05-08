@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import usePerfumes from "../../hooks/usePerfumes";
+import PageTitle from "../Shared/PageTitle/PageTitle";
 
 const ManagePerfumes = () => {
   const [perfumes, setPerfumes] = usePerfumes();
@@ -27,6 +28,7 @@ const ManagePerfumes = () => {
 
   return (
     <div id="perfumes" className="container">
+      <PageTitle title="Manage Inventory"></PageTitle>
       <div className="row">
         <h1 className="text-primary text-center mt-5"> Manage Inventory</h1>
         <div className="">

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import usePerfumes from "../../hooks/usePerfumes";
 import Perfume from "../Perfume/Perfume";
+import PageTitle from "../Shared/PageTitle/PageTitle";
 import "./Perfumes.css";
 
 const Perfumes = () => {
@@ -9,6 +10,7 @@ const Perfumes = () => {
 
   return (
     <div id="perfumes" className="container">
+      <PageTitle title="All Perfumes"></PageTitle>
       <div className="row">
         <h1 className="text-primary text-center my-5"> Our All Perfumes</h1>
         <div className="perfumes-container">

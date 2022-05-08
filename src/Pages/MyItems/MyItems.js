@@ -1,9 +1,8 @@
-import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import axiosPrivate from '../Auth/axiosPrivate';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const MyItems = () => {
     const [myPerfume, setMyPerfume] = useState([]);
@@ -15,7 +14,8 @@ const MyItems = () => {
         fetch(`http://localhost:5000/myItem?email=${email}`, {
             method: 'GET', 
             headers:{
-                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                "content-type":"application/json",
+                "authorization": `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
         .then(res => {
@@ -32,6 +32,7 @@ const MyItems = () => {
 
     return (
         <div className='w-50 mx-auto'>
+            <PageTitle title="My Items"></PageTitle>
             <h2>My All Perfumes: {myPerfume.length}</h2>
             {
                 myPerfume.map(perfume =><div key={perfume._id}>

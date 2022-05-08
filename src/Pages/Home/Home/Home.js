@@ -5,6 +5,7 @@ import auth from "../../../firebase.init";
 import usePerfumes from "../../../hooks/usePerfumes";
 import Perfume from "../../Perfume/Perfume";
 import Loading from "../../Shared/Loading/Loading";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 import Advantages from "../Advantages/Advantages";
 import HowItWork from "../HowItWork/HowItWork";
 import Slider from "../Slider/Slider";
@@ -19,6 +20,7 @@ const Home = () => {
 
   return (
     <div>
+      <PageTitle title="Home"></PageTitle>
       <Slider></Slider>
       <div className="perfumes-area">
         <div className="container">

@@ -1,5 +1,8 @@
 import React from "react";
 import "./HowItWork.css";
+import prsIcon1 from '../../../images/steps/profile-ico1.png';
+import prsIcon2 from '../../../images/steps/profile-ico3.png';
+import prsIcon3 from '../../../images/steps/profile-ico4.png';
 
 const HowItWork = () => {
   return (
@@ -22,7 +25,7 @@ const HowItWork = () => {
               <div className="profileing-bx-hlder color1 hvclr1 profileing-bx-top-mrgn-up ">
                 <span className="pficon clr1">
                   <img
-                    src="https://etutorhome.com/wp-content/uploads/2020/10/profile-ico1.png"
+                    src={prsIcon1}
                     alt="profileing"
                   />
                 </span>
@@ -51,7 +54,7 @@ const HowItWork = () => {
               <div className="profileing-bx-hlder color2 hvclr2">
                 <span className="pficon clr2">
                   <img
-                    src="https://etutorhome.com/wp-content/uploads/2020/10/profile-ico2.png"
+                    src={prsIcon2}
                     alt="profileing"
                   />
                 </span>
@@ -85,7 +88,7 @@ const HowItWork = () => {
               <div className="profileing-bx-hlder color3 hvclr3 profileing-bx-top-mrgn-up ">
                 <span className="pficon clr3">
                   <img
-                    src="https://etutorhome.com/wp-content/uploads/2020/10/profile-ico3.png"
+                    src={prsIcon3}
                     alt="profileing"
                   />
                 </span>

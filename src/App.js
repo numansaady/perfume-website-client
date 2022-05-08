@@ -1,22 +1,21 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { ToastContainer} from "react-toastify";
+import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "./Pages/Shared/Header/Header";
-import Footer from "./Pages/Shared/Footer/Footer";
-import { Route, Routes, Link } from "react-router-dom";
-import Home from "./Pages/Home/Home/Home";
-import Perfumes from "./Pages/Perfumes/Perfumes";
-import Blogs from "./Pages/Blogs/Blogs";
+import "./App.css";
 import About from "./Pages/About/About";
-import SignUp from "./Pages/Auth/SignUp/SignUp";
-import Login from "./Pages/Auth/Login/Login";
-import NotFound from "./Pages/NotFound/NotFound";
 import AddPerfume from "./Pages/AddPerfume/AddPerfume";
+import Login from "./Pages/Auth/Login/Login";
 import RequireAuth from "./Pages/Auth/RequireAuth/RequireAuth";
-import UpdateStock from "./Pages/UpdateStock/UpdateStock";
-import MyItems from "./Pages/MyItems/MyItems";
+import SignUp from "./Pages/Auth/SignUp/SignUp";
+import Blogs from "./Pages/Blogs/Blogs";
+import Home from "./Pages/Home/Home/Home";
 import ManagePerfumes from "./Pages/ManagePerfumes/ManagePerfumes";
+import MyItems from "./Pages/MyItems/MyItems";
+import NotFound from "./Pages/NotFound/NotFound";
+import Perfumes from "./Pages/Perfumes/Perfumes";
+import Footer from "./Pages/Shared/Footer/Footer";
+import Header from "./Pages/Shared/Header/Header";
+import UpdateStock from "./Pages/UpdateStock/UpdateStock";
 
 function App() {
   return (

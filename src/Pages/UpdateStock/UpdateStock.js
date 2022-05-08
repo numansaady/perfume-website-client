@@ -7,19 +7,47 @@ const UpdateStock = () => {
   const [perfume, setPerfume] = usePerfumeById(perfumeId);
   const { _id, name, quantity, supplier, img, description, price } = perfume;
 
-  const handleDelivery = () => {
-    const { quantity, ...rest } = perfume;
-    const newQuantity = parseInt(quantity) -1;
-    const newPerfume = { quantity: newQuantity, ...rest };
-    setPerfume(newPerfume);
+  const handleDelivery = (event) => {
+    const quantity = event.target.quantity.value - 1;
+    const updatedQuantity = {quantity};
+    const url = `https://blooming-lowlands-86443.herokuapp.com/perfume/${perfumeId}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type":"application/json"
+      },
+      body:JSON.stringify(updatedQuantity)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
+    // const { quantity, ...rest } = perfume;
+    // const newQuantity = parseInt(quantity) -1;
+    // const newPerfume = { quantity: newQuantity, ...rest };
+    // setPerfume(newPerfume);
   };
   const handleIncrease = (event) => {
     event.preventDefault();
-    const { quantity, ...rest } = perfume;
-    const newQuantity = parseInt(quantity) + parseInt(event.target.increaseItem.value);
-    const newPerfume = { quantity: newQuantity, ...rest };
-    setPerfume(newPerfume);
-    event.target.reset();
+    const quantity = parseInt(event.target.increaseItem.value) + perfume.quantity;
+    const updatedQuantity = {quantity};
+    const url = `https://blooming-lowlands-86443.herokuapp.com/perfume/${perfumeId}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type":"application/json"
+      },
+      body:JSON.stringify(updatedQuantity)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
+    // const { quantity, ...rest } = perfume;
+    // const newQuantity = parseInt(quantity) + parseInt(event.target.increaseItem.value);
+    // const newPerfume = { quantity: newQuantity, ...rest };
+    // setPerfume(newPerfume);
+    // event.target.reset();
   };
 
   return (
